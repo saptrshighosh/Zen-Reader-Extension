@@ -1,0 +1,102 @@
+
+.zen-mode-night, .zen-mode-bw, .zen-mode-paper {
+  transition: color 300ms ease, background-color 300ms ease;
+}
+
+
+/* --- Night Mode --- */
+html.zen-mode-night {
+  background-color: #121212 !important;
+}
+
+/* Force all elements to inherit the dark background and light text color. */
+html.zen-mode-night, html.zen-mode-night body, html.zen-mode-night div, html.zen-mode-night p, html.zen-mode-night span {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+    border-color: #555 !important; /* Makes borders dark too */
+}
+
+/* Make links a readable light blue. */
+html.zen-mode-night a {
+    color: #8ab4f8 !important;
+}
+
+/* Exclude images/videos from having their backgrounds changed. */
+html.zen-mode-night img,
+html.zen-mode-night video,
+html.zen-mode-night svg {
+    background-color: transparent !important;
+}
+
+
+html.zen-mode-bw {
+  filter: grayscale(100%);
+}
+
+
+/* --- Paper (Sepia) Mode --- */
+
+/* This gives the page a warm, paper-like feel with a sepia filter. */
+html.zen-mode-paper {
+  filter: sepia(20%) contrast(95%);
+  background-color: #fdf6e3;
+}
+
+/* Add a transparent yellow overlay to simulate a "Night Light". */
+html.zen-mode-paper::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F8DE7E;
+    opacity: 0.1; 
+    pointer-events: none; 
+    z-index: 2147483647; 
+}
+
+/* We ensure text has a dark, readable color in Paper mode. */
+html.zen-mode-paper, html.zen-mode-paper body, html.zen-mode-paper p, html.zen-mode-paper div {
+    color: #333 !important;
+}
+
+
+
+
+#zen-reader-break-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(20, 20, 20, 0.85);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 999999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+#zen-reader-break-overlay .zen-reader-break-message {
+  text-align: center;
+  padding: 40px;
+  max-width: 600px;
+}
+
+#zen-reader-break-overlay h1 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+#zen-reader-break-overlay p {
+  font-size: 20px;
+  line-height: 1.6;
+  opacity: 0.9;
+  color: #fff;
+}

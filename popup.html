@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zen Reader Mode</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="assets/icons/icon48.png" alt="Zen Reader Icon" class="logo">
+            <h1>Zen Reader</h1>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Reading Mode</h2>
+            <div class="setting-group" id="reading-mode-group">
+                <div class="radio-option">
+                    <input type="radio" id="mode-off" name="reading-mode" value="off" checked>
+                    <label for="mode-off">Off</label>
+                </div>
+                <!--
+                <div class="radio-option">
+                    <input type="radio" id="mode-night" name="reading-mode" value="night">
+                    <label for="mode-night">Night</label>
+                </div>
+                -->
+                <div class="radio-option">
+                    <input type="radio" id="mode-bw" name="reading-mode" value="bw">
+                    <label for="mode-bw">B&W</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="mode-paper" name="reading-mode" value="paper">
+                    <label for="mode-paper">Paper</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <h2 class="section-title">Eye Care</h2>
+            <div class="setting-row">
+                <div class="setting-label">
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                    <span>20-20-20 Rule</span>
+                    <span id="timer-display"></span>
+                </div>
+                <label for="timer-switch" class="switch">
+                    <input type="checkbox" id="timer-switch">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+    </div>
+    <footer class="footer">
+        Made with ❤️ by Shayaan 🇮🇳
+    </footer>
+    <script src="popup.js"></script>
+</body>
+</html>
